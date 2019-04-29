@@ -42,4 +42,10 @@ public class SnackController {
         List<Snack> snacks = service.findAll();
         return ResponseEntity.ok().body(snacks);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Long id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

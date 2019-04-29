@@ -37,4 +37,8 @@ public class SnackService {
     public List<Snack> findAll() {
         return repository.findAll();
     }
+
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
 }
